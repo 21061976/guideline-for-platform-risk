@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מה המשתמש רואה ועושה</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f0f8ff;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .title {
+            text-align: center;
+            font-size: 2.2em;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+
+        .user-step {
+            background: #f8f9fa;
+            margin: 20px 0;
+            padding: 25px;
+            border-radius: 12px;
+            border-right: 5px solid #3498db;
+        }
+
+        .step-title {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .step-icon {
+            font-size: 2em;
+            margin-left: 15px;
+        }
+
+        .what-user-sees {
+            background: #e8f5e8;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border: 2px solid #27ae60;
+        }
+
+        .what-user-does {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border: 2px solid #ffc107;
+        }
+
+        .result {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border: 2px solid #2196f3;
+        }
+
+        .big-arrow {
+            text-align: center;
+            font-size: 3em;
+            color: #3498db;
+            margin: 20px 0;
+        }
+
+        .scenario {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+
+        .persona {
+            background: white;
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-right: 5px solid #e74c3c;
+        }
+
+        .final-deliverable {
+            background: #2c3e50;
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .components {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .component {
+            background: white;
+            color: #333;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid #3498db;
+        }
+
+        .links {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .link {
+            display: block;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 8px 0;
+            padding: 8px;
+            background: white;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .link:hover {
+            background: #e3f2fd;
+        }
+
+        .highlight {
+            background: #fffacd;
+            padding: 3px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+            color: #d35400;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">👤 מה המשתמש רואה ועושה</h1>
+
+        <!-- תחילה - מי המשתמש -->
+        <div class="scenario">
+            <h2 style="margin-bottom: 20px;">🎭 הסטוריה של המשתמש</h2>
+            <div class="persona">
+                <h3>📋 מי: יוסי כהן - מנהל פרויקט במשרד החינוך</h3>
+                <p><strong>הבעיה:</strong> יוסי צריך להגיש דוח ניהול סיכונים לוועדה, אבל הוא לא יודע איך לכתוב אותו</p>
+                <p><strong>מה יש לו:</strong> מסמך תפיסה של הפרויקט שלו (קובץ Word של 15 עמודים)</p>
+                <p><strong>מה הוא רוצה:</strong> דוח מקצועי מוכן לוועדה תוך 5 דקות</p>
+            </div>
+        </div>
+
+        <!-- שלב 1 -->
+        <div class="user-step">
+            <div class="step-title">
+                <span class="step-icon">🖥️</span>
+                שלב 1: יוסי נכנס לאתר
+            </div>
+            
+            <div class="what-user-sees">
+                <strong>👀 מה יוסי רואה:</strong>
+                <p>עמוד פשוט עם כותרת "מחולל דוחות ניהול סיכונים" וכפתור גדול "העלה מסמך"</p>
+            </div>
+            
+            <div class="what-user-does">
+                <strong>👆 מה יוסי עושה:</strong>
+                <p>לוחץ על "העלה מסמך" ובוחר את קובץ ה-Word של הפרויקט שלו</p>
+            </div>
+            
+            <div class="result">
+                <strong>✅ תוצאה:</strong>
+                <p>יוסי רואה "קובץ הועלה בהצלחה" + שם הקובץ</p>
+            </div>
+        </div>
+
+        <div class="big-arrow">⬇️</div>
+
+        <!-- שלב 2 -->
+        <div class="user-step">
+            <div class="step-title">
+                <span class="step-icon">⚡</span>
+                שלב 2: יוסי לוחץ "צור דוח"
+            </div>
+            
+            <div class="what-user-sees">
+                <strong>👀 מה יוסי רואה:</strong>
+                <p>פס התקדמות עם הכיתובים: "קורא קובץ..." → "מנתח סיכונים..." → "יוצר דוח..."</p>
+            </div>
+            
+            <div class="what-user-does">
+                <strong>👆 מה יוסי עושה:</strong>
+                <p><span class="highlight">כלום!</span> הוא רק מחכה 2-3 דקות</p>
+            </div>
+            
+            <div class="result">
+                <strong>✅ תוצאה:</strong>
+                <p>יוסי רואה "הדוח מוכן!" ועמוד עם הדוח המלא</p>
+            </div>
+        </div>
+
+        <div class="big-arrow">⬇️</div>
+
+        <!-- שלב 3 -->
+        <div class="user-step">
+            <div class="step-title">
+                <span class="step-icon">📊</span>
+                שלב 3: יוסי רואה את הדוח
+            </div>
+            
+            <div class="what-user-sees">
+                <strong>👀 מה יוסי רואה:</strong>
+                <p>דוח מקצועי עם:</p>
+                <ul style="margin: 10px 0; padding-right: 20px;">
+                    <li>כותרת עם שם הפרויקט שלו</li>
+                    <li>4 ריבועים עם מספרי סיכונים (קריטי, גבוה, בינוני, נמוך)</li>
+                    <li>5 כרטיסי סיכונים מפורטים</li>
+                    <li>כפתורי "עריכה" ו"הורד PDF"</li>
+                </ul>
+            </div>
+            
+            <div class="what-user-does">
+                <strong>👆 מה יוסי עושה:</strong>
+                <p>יוסי עורך במידת הצורך ולוחץ "הורד PDF"</p>
+            </div>
+            
+            <div class="result">
+                <strong>✅ תוצאה:</strong>
+                <p>יוסי מקבל קובץ PDF מקצועי שמוכן לשליחה לוועדה</p>
+            </div>
+        </div>
+
+        <!-- התוצר הסופי -->
+        <div class="final-deliverable">
+            <h2>🎯 מה יוסי מקבל בסוף</h2>
+            <p style="font-size: 1.2em; margin: 15px 0;">
+                דוח PDF מקצועי שנראה <strong>בדיוק כמו</strong> 
+                <a href="https://21061976.github.io/720-edit-option/" style="color: #fff; text-decoration: underline;" target="_blank">הכלי שלך</a>
+                אבל עם התוכן של הפרויקט שלו
+            </p>
+        </div>
+
+        <!-- הרכיבים הטכניים -->
+        <div style="background: #f8f9fa; padding: 25px; border-radius: 12px; margin: 30px 0;">
+            <h2>🔧 הרכיבים שצריך לבנות (5 דברים שביקשת)</h2>
+            
+            <div class="components">
+                <div class="component">
+                    <h4>1️⃣ ממשק העלאה</h4>
+                    <p>עמוד שמקבל קבצי Word/PDF</p>
+                </div>
+                
+                <div class="component">
+                    <h4>2️⃣ מודל שפה</h4>
+                    <p>AI שמנתח את הטקסט</p>
+                    
+                    <!-- כפתור פתיחת אקורדיון -->
+                    <div style="margin-top: 15px;">
+                        <button onclick="document.getElementById('aiOptions').style.display = document.getElementById('aiOptions').style.display === 'none' ? 'block' : 'none'; this.innerHTML = document.getElementById('aiOptions').style.display === 'block' ? '▲ אופציות מודל שפה' : '▼ אופציות מודל שפה'; this.style.background = document.getElementById('aiOptions').style.display === 'block' ? '#e74c3c' : '#3498db';" style="
+                            background: #3498db; 
+                            color: white; 
+                            border: none; 
+                            padding: 10px 15px; 
+                            border-radius: 5px; 
+                            cursor: pointer; 
+                            font-weight: bold;
+                            width: 100%;
+                            font-size: 0.9em;
+                        ">
+                            ▼ אופציות מודל שפה
+                        </button>
+                        
+                        <!-- תוכן האקורדיון -->
+                        <div id="aiOptions" style="display: none; margin-top: 10px;">
+                            <div style="background: #f0f8ff; padding: 10px; border-radius: 5px; margin: 5px 0; border: 1px solid #3498db;">
+                                <div style="font-weight: bold; color: #27ae60; margin-bottom: 5px;">🆓 Hugging Face (חינם)</div>
+                                <div style="font-size: 0.85em; line-height: 1.4;">
+                                    <p><strong>עלות:</strong> חינם (15,000 בקשות/חודש)</p>
+                                    <p><strong>איכות:</strong> טובה ⭐⭐⭐</p>
+                                    <p><strong>מהירות:</strong> בינונית (3-5 שניות)</p>
+                                    <a href="https://huggingface.co/settings/tokens" target="_blank" style="color: #3498db; font-size: 0.8em;">קבל טוכן חינמי ←</a>
+                                </div>
+                            </div>
+                            
+                            <div style="background: #f0f8ff; padding: 10px; border-radius: 5px; margin: 5px 0; border: 1px solid #3498db;">
+                                <div style="font-weight: bold; color: #3498db; margin-bottom: 5px;">💎 Claude API (מתקדם)</div>
+                                <div style="font-size: 0.85em; line-height: 1.4;">
+                                    <p><strong>עלות:</strong> ~50₪/חודש</p>
+                                    <p><strong>איכות:</strong> מעולה ⭐⭐⭐⭐⭐</p>
+                                    <p><strong>מהירות:</strong> מהירה (1-2 שניות)</p>
+                                    <a href="https://console.anthropic.com/" target="_blank" style="color: #3498db; font-size: 0.8em;">הרשמה לClaude ←</a>
+                                </div>
+                            </div>
+                            
+                            <div style="background: #f0f8ff; padding: 10px; border-radius: 5px; margin: 5px 0; border: 1px solid #3498db;">
+                                <div style="font-weight: bold; color: #f39c12; margin-bottom: 5px;">🔥 OpenAI GPT (פופולרי)</div>
+                                <div style="font-size: 0.85em; line-height: 1.4;">
+                                    <p><strong>עלות:</strong> ~30₪/חודש</p>
+                                    <p><strong>איכות:</strong> מצוינת ⭐⭐⭐⭐</p>
+                                    <p><strong>מהירות:</strong> מהירה (1-3 שניות)</p>
+                                    <a href="https://platform.openai.com/api-keys" target="_blank" style="color: #3498db; font-size: 0.8em;">API Keys OpenAI ←</a>
+                                </div>
+                            </div>
+                            
+                            <div style="background: #f0f8ff; padding: 10px; border-radius: 5px; margin: 5px 0; border: 1px solid #3498db;">
+                                <div style="font-weight: bold; color: #9b59b6; margin-bottom: 5px;">🏠 מודל מקומי (מתקדמים)</div>
+                                <div style="font-size: 0.85em; line-height: 1.4;">
+                                    <p><strong>עלות:</strong> חינם (אחרי הקמה)</p>
+                                    <p><strong>איכות:</strong> משתנה ⭐⭐⭐</p>
+                                    <p><strong>מהירות:</strong> תלוי בחומרה</p>
+                                    <a href="https://ollama.ai/" target="_blank" style="color: #3498db; font-size: 0.8em;">Ollama - מודלים מקומיים ←</a>
+                                </div>
+                            </div>
+                            
+                            <div style="background: #f0f8ff; padding: 10px; border-radius: 5px; margin: 5px 0; border: 1px solid #3498db;">
+                                <div style="font-weight: bold; color: #e74c3c; margin-bottom: 5px;">⚡ ניתוח בסיסי (ללא AI)</div>
+                                <div style="font-size: 0.85em; line-height: 1.4;">
+                                    <p><strong>עלות:</strong> חינם לחלוטין</p>
+                                    <p><strong>איכות:</strong> בסיסית ⭐⭐</p>
+                                    <p><strong>מהירות:</strong> מהירה מאוד (<1 שנייה)</p>
+                                    <p style="color: #666; font-size: 0.8em;">מבוסס על מילות מפתח וחוקים</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="component">
+                    <h4>3️⃣ הכלי שלך</h4>
+                    <p>אלגוריתם ניהול סיכונים</p>
+                    <a href="https://21061976.github.io/720-edit-option/" target="_blank" style="color: #3498db; font-size: 0.9em;">הכלי הקיים</a>
+                </div>
+                
+                <div class="component">
+                    <h4>4️⃣ פרומפט מנומק</h4>
+                    <p>ההוראות ל-AI איך לנתח</p>
+                    <a href="https://21061976.github.io/prompt-for-generative-risk-task-/" target="_blank" style="color: #3498db; font-size: 0.9em;">פרומפט מנומק</a>
+                </div>
+                
+                <div class="component">
+                    <h4>5️⃣ תבנית דוח</h4>
+                    <p>עיצוב קבוע עם תוכן משתנה</p>
+                    <a href="https://21061976.github.io/720-edit-option/" target="_blank" style="color: #3498db; font-size: 0.9em;">תבנית דוח</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- קישורים -->
+                    <div class="links">
+            <h3>🔗 קישורים לביצוע</h3>
+            
+            <a href="https://colab.research.google.com/" class="link" target="_blank">
+                🚀 Google Colab - איפה לבנות את המערכת
+            </a>
+            
+            <a href="https://huggingface.co/settings/tokens" class="link" target="_blank">
+                🤖 Hugging Face - טוכן AI חינמי
+            </a>
+            
+            <a href="https://21061976.github.io/720-edit-option/" class="link" target="_blank">
+                🛠️ הכלי הקיים שלך - לאינטגרציה
+            </a>
+            
+            <a href="https://21061976.github.io/720-edit-option/" class="link" target="_blank">
+                📊 תבנית הדוח הקבועה - העיצוב שאתה רוצה
+            </a>
+            
+            <div style="background: #fff3cd; padding: 15px; border-radius: 8px; margin: 10px 0; border: 2px solid #ffc107;">
+                <strong>📝 הפרומפט המנומק שלך (מהקוד):</strong>
+                <div style="font-family: monospace; font-size: 0.9em; background: white; padding: 10px; border-radius: 5px; margin: 10px 0; text-align: left;">
+נתח את מסמך התפיסה הבא וזהה 5 הסיכונים העיקריים:<br><br>
+עבור כל סיכון, ספק:<br>
+1. כותרת קצרה (עד 8 מילים)<br>
+2. תיאור מפורט (2-3 משפטים)<br>
+3. הסתברות (1-10)<br>
+4. עוצמת נזק (1-10)<br>
+5. 3 השלכות אפשריות<br>
+6. 3 הזדמנויות<br><br>
+החזר תשובה בפורמט JSON בלבד
+                </div>
+            </div>
+            
+            <a href="https://console.cloud.google.com/" class="link" target="_blank">
+                ☁️ Google Cloud - לאירוח (עתידי)
+            </a>
+            
+            <a href="https://streamlit.io/" class="link" target="_blank">
+                🖥️ Streamlit - לממשק משתמש פשוט
+            </a>
+        </div>
+
+        <!-- סיכום -->
+        <div style="background: #e8f5e8; padding: 20px; border-radius: 10px; margin-top: 30px;">
+            <h3 style="color: #27ae60; margin-bottom: 15px;">📝 בקיצור</h3>
+            <p style="font-size: 1.1em; line-height: 1.8;">
+                <strong>יוסי מעלה קובץ</strong> → <strong>לוחץ כפתור</strong> → <strong>מחכה 3 דקות</strong> → <strong>מקבל דוח מוכן</strong>
+            </p>
+            <div style="margin-top: 15px; padding: 15px; background: white; border-radius: 8px; border-right: 4px solid #27ae60;">
+                <strong>המטרה:</strong> להפוך תהליך של שבועות לתהליך של דקות
+            </div>
+        </div>
+    </div>
+</body>
+</html>
